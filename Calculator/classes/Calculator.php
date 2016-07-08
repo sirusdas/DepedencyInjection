@@ -12,13 +12,13 @@ protected  $operation;
 	public function calculate(){
 		
 		foreach (func_get_args() as $number){
-		/* 	if($this->operation->isFirst == false){ */
+			if($this->operation->isFirst == false){
 				$this->result = $this->operation->run($number, $this->result); //result + number
-/* 			}else{
+			}else{
 				$this->operation->setFirst(true);
 				$this->result = $this->operation->run($this->result, $number ); //number + result
 				$this->operation->setFirst(false);
-			} */
+			}
 		}
 		
 /* 		if($this->operation->isFirst == true){
@@ -31,9 +31,9 @@ protected  $operation;
 		echo 'Result = ' . $this->result;
 	}
 	
-/* 	public function setFirst($isFirst){
+	public function setFirst($isFirst){
 		$this->operation->isFirst = $isFirst;
 	}
-	 */
+	
 }
 ?>
